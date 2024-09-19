@@ -5,9 +5,11 @@ public class Problem2 {
         // This method should insert a new node with the given value at the specified position
         // If the position is out of bounds, insert the node at the end of the list
         if(head.size() <= position){
-            head.addLast(val);
+            ListNode a = new ListNode(val);
+            head.next = a;
         }else{
-            head.add(position -1, val);
+            ListNode b = new ListNode(val);
+            head.insert(position -1, b);
         }
         return head;
     }
