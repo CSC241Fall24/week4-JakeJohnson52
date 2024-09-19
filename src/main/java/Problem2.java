@@ -1,6 +1,6 @@
 import java.util.*;
 public class Problem2 {
-    public static ListNode insert(ListNode head, int val, int position) {
+    public static ListNode insert(ListNode head, int vall, int position) {
         // TODO: Implement the insert method
         // This method should insert a new node with the given value at the specified position
         // If the position is out of bounds, insert the node at the end of the list
@@ -9,9 +9,9 @@ public class Problem2 {
             a = a.next;
         }
         if(a.next != null){
-            a.next.this.val = val;
+            a.next.val = vall;
         } else{
-            a.next.this.val = val;
+            a.next.val = vall;
             while(a.next != null){
                 a = a.next;
             }
