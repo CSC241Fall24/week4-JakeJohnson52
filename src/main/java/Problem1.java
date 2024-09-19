@@ -5,9 +5,9 @@ public class Problem1 {
         // TODO: Implement the concatenate method
         // This method should concatenate l2 to l1 and return l1
         // Remember to create new nodes instead of directly linking l1 to l2
-        for(int i = 0; i < l2.getLength(); i++){    
-            ListNode temp = new ListNode(l2.item(i));
-            l1.next = temp;
+        while(l2.next != null){
+            ListNode temp = new ListNode(l2.next);
+            l2.next = temp;
         }
         return l1;
     }
