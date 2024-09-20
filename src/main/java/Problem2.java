@@ -9,13 +9,17 @@ public class Problem2 {
             a = a.next;
         }
         if(a.next != null){
-            a.next.val = vall;
+            ListNode temp = new ListNode(a.next.val);
+            a.next = temp;
         } else{
-            a.next.val = vall;
+            ListNode temp = new ListNode(a.next.val);
+            a.next = temp;
+            if(a.next != null)
+                temp.next = a.next;
             while(a.next != null){
                 a = a.next;
             }
         }
-        return head;
+        return a;
     }
 }
