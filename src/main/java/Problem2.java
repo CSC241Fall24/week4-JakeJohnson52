@@ -1,25 +1,24 @@
 import java.util.*;
 public class Problem2 {
-    public static ListNode insert(ListNode head, int vall, int position) {
+    public static ListNode insert(ListNode head, int val, int position) {
         // TODO: Implement the insert method
         // This method should insert a new node with the given value at the specified position
         // If the position is out of bounds, insert the node at the end of the list
-        ListNode a = head;
-        for(int i = 0; i < position; i++){
-            a = a.next;
+        ListNode a = new ListNode(val);
+        if(position < 0){
+            head.next = a;
+            return head;
         }
-        if(a.next != null){
-            ListNode temp = new ListNode(a.next.val);
-            a.next = temp;
-        } else{
-            ListNode temp = new ListNode(a.next.val);
-            a.next = temp;
-            if(a.next != null)
-                temp.next = a.next;
-            while(a.next != null){
-                a = a.next;
-            }
+        ListNode b = head;
+        int index = 0;
+        while(b != null && index < position - 1){
+            b = b.next;
+            index++;
         }
+        if(b != null){
+            a.next = b.next;
+            b.next = a;
+        } else b.next = a;
         return a;
     }
 }
