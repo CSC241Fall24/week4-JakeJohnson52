@@ -5,13 +5,13 @@ public class Problem1 {
         // TODO: Implement the concatenate method
         // This method should concatenate l2 to l1 and return l1
         // Remember to create new nodes instead of directly linking l1 to l2
-        if(l1 == null) l1 = cloneList(l2);
+        if(l1 == null) l1 = l2;
         else {
             ListNode temp = l1;
             while(l1.next != null){
                 temp = temp.next;
             }
-            temp.next =  cloneList(l2);
+            temp.next = l2;
         }
         return l1;
     }
