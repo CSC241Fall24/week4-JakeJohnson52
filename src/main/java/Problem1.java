@@ -6,7 +6,7 @@ public class Problem1 {
         // This method should concatenate l2 to l1 and return l1
         // Remember to create new nodes instead of directly linking l1 to l2
         while(l1.next != null){
-            l1.next;
+            ListNode temp = l1.next;
         }
         while(l2.next != null){
             l1.next = l2.next;
