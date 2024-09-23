@@ -14,7 +14,7 @@ public class Problem2 {
         if(position >= count){
             head.next = new ListNode(val);
             return head;
-        }else{
+        }else {
             for(int i = 0; i < position; i++){
                 a = a.next;
             }
@@ -24,6 +24,6 @@ public class Problem2 {
             return a;
         }
         
-        return null;
+        
     }       
 }
