@@ -18,7 +18,7 @@ public class Problem2 {
             for(int i = 0; i < position; i++){
                 a = a.next;
             }
-            ListNode b = new ListNode(val)
+            ListNode b = new ListNode(val);
             a.next = b;
             b.next = a.next.next;
             return a;
