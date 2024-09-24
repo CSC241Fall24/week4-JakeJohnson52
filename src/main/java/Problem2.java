@@ -11,7 +11,7 @@ public class Problem2 {
             count++;
             temp = temp.next;
         }
-        if(position >= count){
+        if(position > count){
             head.next = new ListNode(val);
             return head;
         }else {
