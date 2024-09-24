@@ -21,7 +21,7 @@ public class Problem2 {
             ListNode b = new ListNode(val);
             a.next = b;
             b.next = a.next.next;
-            return a;
+            return head;
         }
         
         
