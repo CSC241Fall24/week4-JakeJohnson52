@@ -4,6 +4,11 @@ public class Problem2 {
         // TODO: Implement the insert method
         // This method should insert a new node with the given value at the specified position
         // If the position is out of bounds, insert the node at the end of the list
+        if(position == 0){
+            ListNode c = new ListNode(val);
+            c.next = head;
+            return c;
+        }
         ListNode temp = head;
         ListNode a = head;
         int count = 0;
