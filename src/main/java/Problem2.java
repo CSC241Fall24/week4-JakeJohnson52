@@ -27,12 +27,12 @@ public class Problem2 {
             e.next = d;
             return head;
         }else {
-            for(int i = 1; i < position; i++){
+            for(int i = 1; i < position -1; i++){
                 a = a.next;
             }
             ListNode b = new ListNode(val);
             a.next = b;
-            b.next = a.next.next;
+            b.next = a.next;
             return head;
         }
         
