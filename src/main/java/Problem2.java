@@ -9,6 +9,7 @@ public class Problem2 {
             c.next = head;
             return c;
         }
+        
         ListNode temp = head;
         ListNode a = head;
         int count = 1;
@@ -16,6 +17,7 @@ public class Problem2 {
             count++;
             temp = temp.next;
         }
+        
         if(position > count){
             ListNode d = new ListNode(val);
             ListNode e = head;
@@ -23,7 +25,7 @@ public class Problem2 {
                 e = e.next;
             }
             e.next = d;
-            return e;
+            return head;
         }else {
             for(int i = 1; i < position; i++){
                 a = a.next;
@@ -31,7 +33,7 @@ public class Problem2 {
             ListNode b = new ListNode(val);
             a.next = b;
             b.next = a.next.next;
-            return a;
+            return head;
         }
         
         
