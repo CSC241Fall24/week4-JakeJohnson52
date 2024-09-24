@@ -25,13 +25,13 @@ public class Problem2 {
             e.next = d;
             return e;
         }else {
-            for(int i = 0; i < position; i++){
+            for(int i = 1; i < position; i++){
                 a = a.next;
             }
             ListNode b = new ListNode(val);
             a.next = b;
             b.next = a.next.next;
-            return head;
+            return a;
         }
         
         
