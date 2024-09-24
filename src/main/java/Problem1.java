@@ -17,6 +17,6 @@ public class Problem1 {
             temp = temp.next;
         }
         last.next = a;
-        return last;
+        return l1;
     }
 }
