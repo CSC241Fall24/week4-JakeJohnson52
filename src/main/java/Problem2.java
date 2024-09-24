@@ -17,8 +17,13 @@ public class Problem2 {
             temp = temp.next;
         }
         if(position > count){
-            head.next = new ListNode(val);
-            return head;
+            ListNode d = new ListNode(val);
+            ListNode e = head;
+            while(e.next != null){
+                e = e.next;
+            }
+            e.next = d;
+            return e;
         }else {
             for(int i = 0; i < position; i++){
                 a = a.next;
