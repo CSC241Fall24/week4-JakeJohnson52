@@ -27,7 +27,7 @@ public class Problem2 {
             e.next = d;
             return head;
         }else {
-            for(int i = 1; i < position -1; i++){
+            for(int i = 1; i < position -2; i++){
                 a = a.next;
             }
             ListNode b = new ListNode(val);
