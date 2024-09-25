@@ -26,13 +26,15 @@ public class Problem2 {
             e.next = d;
             return head;
         }else {
-            ListNode a = head;
-            for(int i = 1; i < position -1; i++){
-                a = a.next;
+            ListNode temp = head;
+            ListNode r = new ListNode(val);
+            int amt;
+            while(temp.next != null && amt < position - 2){
+                amt++;
+                temp = temp.next;
             }
-            ListNode b = new ListNode(val);
-            a.next = b;
-            b.next = a.next;
+            r.next = temp.next;
+            temp.next = r;
             return head;
         }
         
