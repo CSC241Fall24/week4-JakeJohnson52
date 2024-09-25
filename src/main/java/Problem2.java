@@ -12,6 +12,7 @@ public class Problem2 {
         
         ListNode temp = head;
         int count = 1;
+        int amt = 0;
         while(temp.next != null){
             count++;
             temp = temp.next;
@@ -28,7 +29,6 @@ public class Problem2 {
         }else {
             ListNode p = head;
             ListNode r = new ListNode(val);
-            int amt;
             while(p.next != null && amt < position - 2){
                 amt++;
                 p = p.next;
